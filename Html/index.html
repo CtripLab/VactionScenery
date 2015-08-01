@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=QvywvERLn54u0EWR1OMjGz4x" type="text/javascript"></script>
+</head>
+<body>
+<div class="view" id="indexView">
+    <div class="cm-header">
+        <div class="cm-header-inner">
+            <span class="cm-header-icon fl" id="btnIndexBack"><span class="headpic"><img
+                    src="../assets/images/headpic.jpg" alt=""></span></span>
+            <span class="cm-header-icon fr"><span class="photo"><i class="iconfont">&#xe886;</i>
+                <form id="fileUp" name="fileUp"><input id="btnUpload" type="file"></form></span></span>
+
+            <h1 class="cm-page-title">首页</h1>
+        </div>
+    </div>
+    <div class="cm-page">
+        <div class="page-content">
+            <div class="list-home-pic">
+                <ul id="viewList">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="view " id="uploadView" style="display: none">
+    <div class="cm-header">
+        <div class="cm-header-inner">
+            <span id="btnUploadBack" class="cm-header-icon fl"><i class="icon-back"></i></span>
+            <span id="btnSend" class="cm-header-btn fr">发送</span>
+
+            <h1 class="cm-page-title">上传图片</h1>
+        </div>
+    </div>
+    <div class="cm-page">
+        <div class="page-content">
+            <div class="form-upload">
+                <!-- <div class="form-item form-item-pic">
+                    <ul class="list-pic">
+                        <li><img src="../assets/images/_p1.jpg" alt=""></li>
+                        <li class="list-pic-file"><input type="file"></li>
+                    </ul>
+                </div> -->
+                <div class="form-item form-item-picbox">
+                    <div class="picbox">
+                        <img id="previewImg" src="../assets/images/_p1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="description">
+                        <!--<span class="num">30</span>-->
+                        <textarea id="txtRemark" placeholder="说点什么..."></textarea>
+                    </div>
+                </div>
+                <div id="btnLocation" class="form-item form-item-location form-item--arrow">
+                    <i class="iconfont">&#xe63e;</i><span id="txtLocation">凌空SOHO</span>
+                </div>
+            </div>
+            <!-- <div class="btn-outer">
+                <span class="btn">上传</span>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<div class="view view-location" id="positionView" style="display: none">
+    <div class="cm-header header-search">
+        <div class="cm-header-inner">
+            <span id="btnPositionBack" class="cm-header-icon fl"><i class="icon-back"></i></span>
+
+            <div class="search-box">
+                <input id="_input" type="text" placeholder="所在位置">
+            </div>
+        </div>
+    </div>
+
+    <div class="cm-page">
+        <div class="page-content">
+            <div class="location-map" id="allmap">
+            </div>
+            <div class="location-list" id="location-list">
+                <div class="loading" id="loading" style="display: block"></div>
+                <ul id="r-result"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="view" id="userView" style="display: none">
+    <div class="cm-header">
+        <div class="cm-header-inner">
+            <span class="cm-header-icon fl"><i class="iconfont">&#xf0030;</i></span>
+            <span class="cm-header-icon fr"><span class="photo"><i class="iconfont">&#xe886;</i><input
+                    type="file"></span></span>
+            <!-- <i class="icon-back"></i> -->
+            <h1 class="cm-page-title">个人中心</h1>
+        </div>
+    </div>
+    <div class="cm-page">
+        <!-- 头像 -->
+        <div class="lyx_head_info">
+            <div class="lyx_center">
+                <img src="../assets/images/headpic.jpg" class="lyx_head_pic" alt="">
+
+                <p class="lyx_name">tracy</p>
+            </div>
+        </div>
+        <!-- 返利信息 -->
+        <div class="lyx_cashback">
+            <div class="lyx_cashback_left">
+                <p class="lyx_cb_text">即将返利</p>
+
+                <p class="lyx_cb_money">￥100</p>
+            </div>
+            <div class="lyx_cashback_right">
+                <p class="lyx_cb_text">累计返利</p>
+
+                <p class="lyx_cb_money">￥1000</p>
+            </div>
+        </div>
+        <!-- 提现 -->
+        <div class="lyx_money">
+            <button>提现</button>
+        </div>
+    </div>
+</div>
+
+<div class="view view-preview" id="detailView" style="display: none">
+    <div class="cm-header header-single">
+        <div class="cm-header-inner">
+            <span class="cm-header-icon fl" id="btnDetailBack"><i class="icon-back"></i></span>
+            <span class="cm-header-icon fr"><i class="iconfont" style="font-size:18px;">&#xe6d2;</i></span>
+
+            <h1 class="cm-page-title"></h1>
+        </div>
+    </div>
+    <div class="cm-page">
+        <div class="page-content">
+            <div class="loading" id="loading2" style="display: block"></div>
+            <div class="preview-box">
+                <div class="preview-box-inner" id="container">
+                    <div class="preview-item">
+                        <div class="pic"><img src="assets/images/_p1.jpg" alt=""></div>
+                        <div class="preview-info">
+                            <p class="preview-location"><i class="iconfont">&#xe63e;</i>武功山</p>
+
+                            <p class="preview-author">某某某&nbsp;<span>2015-07-30</span>上传</p>
+
+                            <p class="preview-desc">
+                                走出城市，拥抱自然。。。测试文字走出城市，拥抱自然。。。测试文字走出城市，拥抱自然。。。测试文字走出城市，拥抱自然。。。测试文字走出城市，拥抱自然。。。测试文字走出城市，拥抱自然。。。测试文字走出城市，拥抱自然。。。测试文字</p>
+                        </div>
+                    </div>
+                    <div class="preview-item">
+                        <div class="pic"><img src="assets/images/_p2.jpg" alt=""></div>
+                        <div class="preview-info">
+                            <p class="preview-location"><i class="iconfont">&#xe63e;</i>武功山</p>
+
+                            <p class="preview-author">某某某&nbsp;<span>2015-07-30</span>上传</p>
+
+                            <p class="preview-desc">
+                                走出城市，拥抱自然。。。测试文字走出城市，拥抱自然。。。测试文字走出城市，拥抱自然。。。测试文字走出城市，拥抱自然。。。测试文字走出城市，拥抱自然。。。测试文字走出城市，拥抱自然。。。测试文字走出城市，拥抱自然。。。测试文字</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-actions">
+                <ul>
+                    <li><i class="iconfont" style="font-size:21px;">&#xe629;</i><span>3212</span></li>
+                    <li><i class="iconfont">&#xe600;</i><span>13</span></li>
+                </ul>
+                <span class="btn-look"><i class="iconfont">&#xe641;</i></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="view view-location" id="tuijianView" style="display: none">
+    <div class="cm-header">
+        <div class="cm-header-inner">
+            <span id="btnTJBack" class="cm-header-icon fl"><i class="icon-back"></i></span>
+            <span class="cm-header-icon fr"><i class="iconfont" style="font-size:18px;">&#xe6d2;</i></span>
+
+            <h1 class="cm-page-title">实景推荐</h1>
+        </div>
+    </div>
+    <div class="cm-page">
+        <div class="page-content">
+            <div class="location-map" style="bottom:0;">
+                <img src="assets/images/location.jpg" alt="" style="">
+            </div>
+        </div>
+    </div>
+    <div class="location-popup location-popup-1">
+        <span class="location-popup-tag">酒店</span>
+        <img src="assets/images/recommend-hotel-1.jpg" alt="">
+    </div>
+    <div class="location-popup location-popup-2">
+        <span class="location-popup-tag">旅游</span>
+        <img src="assets/images/recommend-trip-1.jpg" alt="">
+    </div>
+    <div class="location-popup location-popup-3">
+        <span class="location-popup-tag">美食</span>
+        <img src="assets/images/recommend-food-1.jpg" alt="">
+    </div>
+    <div class="location-popup location-popup-4">
+        <span class="location-popup-tag">美食</span>
+        <img src="assets/images/recommend-food-2.jpg" alt="">
+    </div>
+    <div class="location-popup location-popup-5">
+        <span class="location-popup-tag">酒店</span>
+        <img src="assets/images/recommend-hotel-2.jpg" alt="">
+    </div>
+</div>
+
+<script data-main="../Core/main.js" src="../Libs/requireJS.js"></script>
+</body>
+</html>
