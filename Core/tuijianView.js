@@ -1,7 +1,7 @@
 /**
  * Created by jl.gu on 2015/8/2.
  */
-define(['indexView'], function (indexView) {
+define(['proView'], function (proView) {
 
     return function () {
 
@@ -14,13 +14,8 @@ define(['indexView'], function (indexView) {
 
         $(".location-popup").on("click",function(){
             window.ani("tuijianView", "productView");
+            proView();
         });
-
-        $("#btnProBack").on("click", function () {
-            window.bck("productView", "indexView");
-            window.call();
-        });
-
 
     }
 });

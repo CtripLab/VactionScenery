@@ -34,7 +34,8 @@ require.config({
         'uploadView': corePath + 'uploadView',
         'positionView': corePath + 'positionView',
         'detailView': corePath + 'detailView',
-        'tuijianView': corePath + 'tuijianView'
+        'tuijianView': corePath + 'tuijianView',
+        'proView': corePath + 'proView'
 
 
 

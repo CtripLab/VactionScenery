@@ -1,7 +1,7 @@
 /**
  * Created by jl.gu on 2015/8/2.
  */
-define(['indexView',"swipe"], function (indexView,swipe) {
+define(['indexView',"swipe",'proView'], function (indexView,swipe,proView) {
 
     return function () {
 
@@ -47,7 +47,13 @@ define(['indexView',"swipe"], function (indexView,swipe) {
 
         $("#btnDetailBack").on("click", function () {
             window.bck("detailView", "indexView");
+            window.call();
         });
+
+        $("#btnLook").on("click",function(){
+            window.ani("detailView", "productView");
+            proView();
+        })
     };
 
 });
