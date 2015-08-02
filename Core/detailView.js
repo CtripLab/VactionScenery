@@ -12,9 +12,6 @@ define(['indexView',"swipe"], function (indexView,swipe) {
             if (data) {
                 $('#loading2').hide();
                 data = $.parseJSON(data);
-                var totalPic = data.List.length;
-                $(".cm-page-title").html("1/" + totalPic);
-
 
                 var domStr = ['<div class="preview-item">' +
                     '<div class="pic"><img src="{0}" alt=""></div>' +
@@ -28,12 +25,21 @@ define(['indexView',"swipe"], function (indexView,swipe) {
                 $.each(data.List, function (i, o) {
                     viewDomStr += domStr.format(o.ImageUrl, o.LocationStr, o.UserName, o.UpdateTime, o.Remark);
                 });
+
                 $("#container").html($.parseHTML(viewDomStr));
                 // 绑定swipe 图片滑动切换
-                $(".preview-box").Swipe({
-                    transitionEnd: function (i) {
-                        $(".cm-page-title").html((i + 1) + "/" + totalPic);
-                    }
+                $(".preview-box").Swipe();
+                $('#good').click(function(e){
+                    //$('#good').find('span').text(+$('#good').find('span').text()+1);
+                    //$('#bad').find('span').text(+$('#bad').find('span').text()-1);
+                    var cur=$(e.currentTarget).find('span');
+                    cur.text(+cur.text()+1);
+                });
+                $('#bad').click(function(e){
+                    //$('#good').find('span').text(+$('#good').find('span').text()+1);
+                    //$('#bad').find('span').text(+$('#bad').find('span').text()-1);
+                    var cur=$(e.currentTarget).find('span');
+                    cur.text(+cur.text()-1);
                 });
             };
         });
