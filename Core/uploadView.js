@@ -38,7 +38,7 @@ define(["imgP", "ajax", 'positionView','tuijianView'], function (imgP, ajax, pos
                                 "Bad": 0
                             };
 
-                            ajax.post("/VactionScenery/ajax/Save.ashx", JSON.stringify(sendBody), function () {
+                            ajax.post("http://10.8.84.102//VactionScenery/ajax/Save.ashx", JSON.stringify(sendBody), function () {
                                 console.log("上传成功");
                                 tuijianView();
 
@@ -48,7 +48,7 @@ define(["imgP", "ajax", 'positionView','tuijianView'], function (imgP, ajax, pos
                         error: function (error) {
                             console.log(error);
                         },
-                        url: '/VactionScenery/ajax/Upload.ashx', /*设置post提交到的页面*/
+                        url: 'http://10.8.84.102//VactionScenery/ajax/Upload.ashx', /*设置post提交到的页面*/
                         type: "post", /*设置表单以post方法提交*/
                         dataType: "text" /*设置返回值类型为文本*/
                     });

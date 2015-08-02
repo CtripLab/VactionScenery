@@ -33,24 +33,24 @@ define(['detailView', 'uploadView'], function (detailView, uploadView) {
         };
 
         var domStr = [
-            '<li class="lidom">',
+            '<li class="lidom" mid="{0}">',
             '<div class="pic">',
-            '<img src="{0}" alt="">',
-            '<div class="desc">{1}</div>',
+            '<img src="{1}" alt="">',
+            '<div class="desc">{2}</div>',
             '</div>',
             '<div class="info">',
-            '<div class="author"><i class="iconfont">&#xe629;</i>{2}</div>',
-            '<div class="location"><i class="iconfont">&#xe63e;</i>{3}</div>',
+            '<div class="author"><i class="iconfont">&#xe629;</i>{3}</div>',
+            '<div class="location"><i class="iconfont">&#xe63e;</i>{4}</div>',
             '</div>',
             '</li>'].join('\n');
 
 
-        $.get("/VactionScenery/ajax/GetList.ashx", "", function (res) {
+        $.get("http://10.8.84.102/VactionScenery/ajax/GetList.ashx", "", function (res) {
             var lt = $.parseJSON(res);
 
             $.each(lt.List, function (i, o) {
 
-                var viewDomStr = domStr.format(o.ImageUrl, o.Remark, o.Good, o.LocationStr),
+                var viewDomStr = domStr.format(o.MessageID, o.ImageUrl, o.Remark, o.Good, o.LocationStr),
                     viewDom = $.parseHTML(viewDomStr);
 
 
@@ -59,7 +59,7 @@ define(['detailView', 'uploadView'], function (detailView, uploadView) {
 
 
             $.each($(".lidom"), function (i, o) {
-                o.on("click", function () {
+                $(o).on("click", function () {
                     detailView();
                 });
             });

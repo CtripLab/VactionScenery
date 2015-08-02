@@ -12,7 +12,12 @@ require.config({
             exports: "exif"
         },
         jqSubmit: {
-            exports: "jqSubmit"
+            exports: "jqSubmit",
+            deps:["jQuery"]
+        },
+        swipe:{
+            exports: "swipe",
+            deps:["jQuery"]
         }
     },
     paths: {
@@ -20,7 +25,7 @@ require.config({
         'jQuery': libsPath + 'jquery-1.11.3.min',
         'exif': libsPath + 'exif',
         'jqSubmit': libsPath + 'jquery-form',
-
+        'swipe': libsPath +"swipe",
         //core
         'helper': corePath + 'helper',
         'imgP': corePath + 'imgPosition',
@@ -30,6 +35,7 @@ require.config({
         'positionView': corePath + 'positionView',
         'detailView': corePath + 'detailView',
         'tuijianView': corePath + 'tuijianView'
+
 
 
     }
