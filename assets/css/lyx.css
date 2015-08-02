@@ -13,6 +13,7 @@
 /*.lyx_cashback { width: 100%; height: 100px; background: #ffffff; border-bottom: 1px solid #ccc; }
 .lyx_cashback p { text-align: center; }
 .lyx_cashback img { margin-top: 24px; }*/
+.lyx_cashback { background: #ffffff; }
 .lyx_cashback_left,.lyx_cashback_right { position: relative; width: 50%; height: 90px; float: left; }   /*border-right: 1px solid #ccc;*/
 .lyx_cashback_left{ float: left; }
 .lyx_cashback_right {float: right; }
