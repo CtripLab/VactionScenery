@@ -13,14 +13,7 @@ define(['indexView',"swipe"], function (indexView,swipe) {
                 $('#loading2').hide();
                 data = $.parseJSON(data);
                 var totalPic = data.List.length;
-
-                // 绑定swipe 图片滑动切换
-                $(".preview-box").Swipe({
-                    transitionEnd: function (i) {
-                        $(".cm-page-title").html((i + 1) + "/" + totalPic);
-                    }
-                });
-
+                $(".cm-page-title").html("1/" + totalPic);
 
 
                 var domStr = ['<div class="preview-item">' +
@@ -31,16 +24,18 @@ define(['indexView',"swipe"], function (indexView,swipe) {
                     '<p class="preview-desc">{4}</p>' +
                     '</div>' +
                     '</div>'].join('/n');
-
+                var viewDomStr='';
                 $.each(data.List, function (i, o) {
-
-                    var viewDomStr = domStr.format(o.ImageUrl, o.LocationStr, o.UserName, o.UpdateTime, o.Remark),
-                        viewDom = $.parseHTML(viewDomStr);
-
-                    $("#container").append(viewDom[0]);
+                    viewDomStr += domStr.format(o.ImageUrl, o.LocationStr, o.UserName, o.UpdateTime, o.Remark);
                 });
-            }
-            ;
+                $("#container").html($.parseHTML(viewDomStr));
+                // 绑定swipe 图片滑动切换
+                $(".preview-box").Swipe({
+                    transitionEnd: function (i) {
+                        $(".cm-page-title").html((i + 1) + "/" + totalPic);
+                    }
+                });
+            };
         });
 
 
