@@ -2,7 +2,8 @@
  * reset
  */
 
-body{ color: #333;}
+body{ color: #333; background: #fff;}
+.cm-page{ color: #333; background: #fff;}
 
 
 /**
@@ -179,3 +180,12 @@ body{ color: #333;}
 .list-home-pic li .author{ float: right; max-width: 50%; font-size: 12px; line-height: 30px; color: #999;}
 .list-home-pic li .location{ float: left; max-width: 50%;line-height: 30px; white-space: nowrap; overflow: hidden; text-overflow:ellipsis; color: #333;}
 .list-home-pic li .info .iconfont{ margin-right: 3px;}
+
+.cui-tab-mod li.cui-tab-current{ color: #f04848;}
+.cui-tab-mod .cui-tab-scrollbar{ background-color: #f04848;}
+.price{ font-size: 16px; color: #ff7d13;}
+
+.product-list{}
+.product-list table{ table-layout: fixed; width: 100%;}
+.product-list table td{ padding: 10px 5px; text-align: center; border-bottom:1px solid #e4e4e4;}
+.product-list table td:nth-child(2){ text-align: left;}
