@@ -15,6 +15,19 @@ define(["imgP", "ajax", 'positionView','tuijianView'], function (imgP, ajax, pos
         var getMapLocation = function () {
         };
 
+
+        var submitPost=function (url, args) {
+            var form = "<form method='post' action='" + (url || '') + "'>",
+                inputStr = "";
+            if (typeof args === 'object') {
+                for (arg in args) {
+                    var input = "<input type='hidden' name='" + arg + "' value='" + args[arg] + "'>";
+                    form += input;
+                }
+                $(form + '</form>').submit();
+            }
+        };
+
         var waitLoadImg = setInterval(function () {
 
             if (localStorage.getItem("backbone_location")) {
@@ -23,7 +36,9 @@ define(["imgP", "ajax", 'positionView','tuijianView'], function (imgP, ajax, pos
 
                 $("#btnSend").on("click", function () {
 
-                    $("#fileUp").ajaxSubmit({
+
+
+                    $("#fileUp").submit({
                         success: function (imgUrl) {
 
                             var sendBody = {
