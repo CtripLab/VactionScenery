@@ -100,9 +100,9 @@
 <div class="view" id="userView" style="display: none">
     <div class="cm-header">
         <div class="cm-header-inner">
-            <span class="cm-header-icon fl"><i class="iconfont">&#xf0030;</i></span>
-            <span class="cm-header-icon fr"><span class="photo"><i class="iconfont">&#xe886;</i><input
-                    type="file"></span></span>
+            <!--<span class="cm-header-icon fl"><i class="iconfont">&#xf0030;</i></span>-->
+            <!--<span class="cm-header-icon fr"><span class="photo"><i class="iconfont">&#xe886;</i><input-->
+                    <!--type="file"></span></span>-->
             <!-- <i class="icon-back"></i> -->
             <h1 class="cm-page-title">个人中心</h1>
         </div>
@@ -118,16 +118,68 @@
         </div>
         <!-- 返利信息 -->
         <div class="lyx_cashback">
-            <div class="lyx_cashback_left">
-                <p class="lyx_cb_text">即将返利</p>
+            <table class="lyx_show">
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="lyx_icon">
+                            <p class="lyx_cb_text">即将返利</p>
 
-                <p class="lyx_cb_money">￥100</p>
+                            <p class="lyx_cb_money">￥5</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="lyx_icon">
+                            <p class="lyx_cb_text">累计返利</p>
+
+                            <p class="lyx_cb_money">￥10</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="lyx_icon">
+                            <p class="lyx_cb_text">我的实景</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="lyx_icon">
+                            <p class="lyx_cb_text">我的订单</p>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- <div class="lyx_cashback">
+            <div class="lyx_cashback_left">
+                <span class="cm-header-icon fl"><i class="iconfont">&#xf0030;</i></span>
+                <div class="lyx_icon">
+                    <p class="lyx_cb_text">即将返利</p>
+                    <p class="lyx_cb_money">￥100</p>
+                </div>
             </div>
             <div class="lyx_cashback_right">
+                <span class="cm-header-icon fl"><i class="iconfont">&#xf0030;</i></span>
                 <p class="lyx_cb_text">累计返利</p>
-
                 <p class="lyx_cb_money">￥1000</p>
             </div>
+        </div> -->
+
+        <!-- <div class="lyx_cashback">
+            <div class="lyx_cashback_left">
+                <span class="cm-header-icon fl"><i class="iconfont">&#xf0030;</i></span>
+                <p class="lyx_cb_text">我的实景</p>
+            </div>
+            <div class="lyx_cashback_right">
+                <span class="cm-header-icon fl"><i class="iconfont">&#xf0030;</i></span>
+                <p class="lyx_cb_text">我的订单</p>
+            </div>
+        </div> -->
+        <div class="lyx_cashback">
+            <img src="assets/images/speed.png" alt="">
         </div>
         <!-- 提现 -->
         <div class="lyx_money">
@@ -221,6 +273,92 @@
     <div class="location-popup location-popup-5">
         <span class="location-popup-tag">酒店</span>
         <img src="../assets/images/recommend-hotel-2.jpg" alt="">
+    </div>
+</div>
+
+<div class="view" id="productView" style="display: none">
+    <div class="cm-header">
+        <div class="cm-header-inner">
+            <span id="btnProBack" class="cm-header-icon fl"><i class="icon-back"></i></span>
+            <span class="cm-header-icon fr"><i class="iconfont" style="font-size:18px;">&#xe6d2;</i></span>
+
+            <h1 class="cm-page-title">周边玩乐</h1>
+        </div>
+    </div>
+    <div class="cm-page">
+        <div class="page-content">
+            <ul class="cui-tab-mod">
+                <li class="cui-tab-current">酒店</li>
+                <li>美食</li>
+                <li>旅游</li>
+                <li>购物</li>
+                <i class="cui-tab-scrollbar cui-tabnum4"></i>
+            </ul>
+            <div class="product-list">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td width="30"><img src="../assets/images/xiecheng.png" alt=""></td>
+                        <td>桔子水晶酒店（上海北外滩店）</td>
+                        <td width="80"><span class="price"><dfn>&yen;</dfn>230</span></td>
+                        <td width="100"><span class="btn">去购买</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="source"><img src="../assets/images/xiecheng.png" alt=""></span></td>
+                        <td>上海宝安大酒店</td>
+                        <td><span class="price"><dfn>&yen;</dfn>488</span></td>
+                        <td><span class="btn">去购买</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="source"><img src="../assets/images/tuniu.png" alt=""></span></td>
+                        <td>上海吉祥酒店</td>
+                        <td><span class="price"><dfn>&yen;</dfn>362</span></td>
+                        <td><span class="btn">去购买</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="source"><img src="../assets/images/elong.png" alt=""></span></td>
+                        <td>上海源深加州酒店</td>
+                        <td><span class="price"><dfn>&yen;</dfn>230</span></td>
+                        <td><span class="btn">去购买</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <ul class="cui-tab-mod">
+                <li class="cui-tab-current">其他相关</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <i class="cui-tab-scrollbar cui-tabnum4"></i>
+            </ul>
+            <div class="list-home-pic">
+                <ul>
+                    <li>
+                        <div class="pic">
+                            <img src="../assets/images/_p1.jpg" alt="">
+
+                            <div class="desc">山谷，赞</div>
+                        </div>
+                        <div class="info">
+                            <div class="author"><i class="iconfont"></i>3214</div>
+                            <div class="location"><i class="iconfont"></i>上海</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pic">
+                            <img src="../assets/images/_p2.jpg" alt="">
+
+                            <div class="desc">看日出日落</div>
+                        </div>
+                        <div class="info">
+                            <div class="author"><i class="iconfont"></i>3214</div>
+                            <div class="location"><i class="iconfont"></i>上海</div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 

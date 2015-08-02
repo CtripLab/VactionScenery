@@ -44,27 +44,30 @@ define(['detailView', 'uploadView'], function (detailView, uploadView) {
             '</div>',
             '</li>'].join('\n');
 
+        window.call = function () {
+            $.get("http://10.8.84.102/VactionScenery/ajax/GetList.ashx", "", function (res) {
+                var lt = $.parseJSON(res);
+                $("#viewList").html("");
+                $.each(lt.List, function (i, o) {
 
-        $.get("http://10.8.84.102/VactionScenery/ajax/GetList.ashx", "", function (res) {
-            var lt = $.parseJSON(res);
-
-            $.each(lt.List, function (i, o) {
-
-                var viewDomStr = domStr.format(o.MessageID, o.ImageUrl, o.Remark, o.Good, o.LocationStr),
-                    viewDom = $.parseHTML(viewDomStr);
-
-
-                $("#viewList").append(viewDom[0]);
-            });
+                    var viewDomStr = domStr.format(o.MessageID, o.ImageUrl, o.Remark, o.Good, o.LocationStr),
+                        viewDom = $.parseHTML(viewDomStr);
 
 
-            $.each($(".lidom"), function (i, o) {
-                $(o).on("click", function () {
-                    detailView();
+                    $("#viewList").append(viewDom[0]);
                 });
-            });
 
-        });
+
+                $.each($(".lidom"), function (i, o) {
+                    $(o).on("click", function () {
+                        detailView();
+                    });
+                });
+
+            });
+        };
+
+        window.call();
 
         $("#btnIndexBack").on("click", function () {
             window.ani("indexView", "userView");

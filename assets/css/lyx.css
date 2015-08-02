@@ -6,15 +6,18 @@
 .lyx_name { font-size: 16px; text-align: center; padding-top: 10px; }
 .lyx_center { width: 100%; margin: 0 auto; padding-top: 30px; }
 
+.lyx_show{ table-layout: fixed; width: 100%;}
+.lyx_show tr{ height: 80px;}
+.lyx_show td{ text-align: center; border-bottom:1px solid #ccc; border-right:1px solid #ccc;}
 
-.lyx_cashback { width: 100%; height: 100px; background: #ffffff; border-bottom: 1px solid #ccc; }
+/*.lyx_cashback { width: 100%; height: 100px; background: #ffffff; border-bottom: 1px solid #ccc; }
 .lyx_cashback p { text-align: center; }
-.lyx_cashback img { margin-top: 24px; }
+.lyx_cashback img { margin-top: 24px; }*/
 .lyx_cashback_left,.lyx_cashback_right { position: relative; width: 50%; height: 90px; float: left; }   /*border-right: 1px solid #ccc;*/
 .lyx_cashback_left{ float: left; }
 .lyx_cashback_right {float: right; }
 .lyx_cashback_right:before{ position: absolute; left: 0; top: 10px; bottom:10px; content: ""; width: 1px; background: #e4e4e4;}
-.lyx_cb_text { width: 80px; margin: 0 auto; font-size: 16px; padding-top: 10px; }
+.lyx_cb_text { width: 80px; margin: 0 auto; font-size: 14px; padding-top: 10px; }
 .lyx_cb_money { font-size: 25px; padding-top: 10px; clear: both; }
 .lyx_cb_ { line-height: 100px; }
 
