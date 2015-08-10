@@ -16,7 +16,7 @@ define(['indexView',"swipe",'proView'], function (indexView,swipe,proView) {
                 var domStr = ['<div class="preview-item">' +
                     '<div class="pic"><img src="{0}" alt=""></div>' +
                     '<div class="preview-info">' +
-                    '<p class="preview-location"><i class="iconfont">&#xe63e;</i>{1}</p>' +
+                    '<p class="preview-location"><i class="iconfont">&#xe606;</i>{1}</p>' +
                     '<p class="preview-author"{2}&nbsp;<span>{3}</span>上传</p>' +
                     '<p class="preview-desc">{4}</p>' +
                     '</div>' +
