@@ -30,24 +30,24 @@ define(["imgP", "ajax", 'positionView', 'tuijianView'], function (imgP, ajax, po
 
 
         $("#btnSend").on("click", function () {
-
-            var sendBody = {
-                "MessageID": 0,
-                "ImageUrl": imgUrl,
-                "UserName": "某某某",
-                "UpdateTime": new Date().format("yyyy-MM-dd"),
-                "Location": localStorage.getItem("backbone_location"),
-                "LocationStr": $("#txtLocation").text(),
-                "Remark": $("#txtRemark").val(),
-                "Good": 0,
-                "Bad": 0
-            };
-
-            ajax.post("http://10.8.84.102/VactionScenery/ajax/Save.ashx", JSON.stringify(sendBody), function () {
-                console.log("上传成功");
-                tuijianView();
-
-            });
+            tuijianView();
+            //var sendBody = {
+            //    "MessageID": 0,
+            //    "ImageUrl": imgUrl,
+            //    "UserName": "某某某",
+            //    "UpdateTime": new Date().format("yyyy-MM-dd"),
+            //    "Location": localStorage.getItem("backbone_location"),
+            //    "LocationStr": $("#txtLocation").text(),
+            //    "Remark": $("#txtRemark").val(),
+            //    "Good": 0,
+            //    "Bad": 0
+            //};
+            //
+            //ajax.post("http://10.8.84.102/VactionScenery/ajax/Save.ashx", JSON.stringify(sendBody), function () {
+            //    console.log("上传成功");
+            //    tuijianView();
+            //
+            //});
         });
 
 
