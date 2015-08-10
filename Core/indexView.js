@@ -39,8 +39,8 @@ define(['detailView', 'uploadView'], function (detailView, uploadView) {
             '<div class="desc">{2}</div>',
             '</div>',
             '<div class="info">',
-            '<div class="author"><i class="iconfont">&#xe629;</i>{3}</div>',
-            '<div class="location"><i class="iconfont">&#xe63e;</i>{4}</div>',
+            '<div class="author"><i class="iconfont">&#xe601;</i>{3}</div>',
+            '<div class="location"><i class="iconfont">&#xe606;</i>{4}</div>',
             '</div>',
             '</li>'].join('\n');
 
