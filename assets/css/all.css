@@ -184,8 +184,9 @@ body{ color: #333; background: #fff;}
 .location-list-search{ top:44px; height: auto;}
 
 .location-popup{ position: absolute; top: 230px; left: 50px; width: 90px; height: 50px; border:1px solid #999; background: #fff; border-radius:5px; -webkit-box-sizing:border-box;box-sizing:border-box;}
-.location-popup:before{  content: ""; display: inline-block; width: 3px; height: 3px; position: absolute; bottom: -18px; left: 50%; margin-left: -3px; border-radius: 50%; background: white; border: 3px solid red; box-shadow: 0 0 3px rgba(0,0,0,.5);}
+/*.location-popup:before{  content: ""; display: inline-block; width: 3px; height: 3px; position: absolute; bottom: -18px; left: 50%; margin-left: -3px; border-radius: 50%; background: white; border: 3px solid red; box-shadow: 0 0 3px rgba(0,0,0,.5);}*/
 .location-popup:after{ position: absolute; bottom:-9px; left: 50%; margin-left: -7px; width: 0; height: 0; border-width: 12px 8px 8px 16px; border-style: solid; border-color: transparent rgba(0,0,0,.5) transparent transparent; content: ""; -webkit-transform:rotate(-220deg); transform:rotate(-220deg);}
+.location-popup .iconfont{ position: absolute; left: 50%; top: 50%; font-size: 32px; margin-left: -14px; margin-top: 30px; color: #099dfe; text-shadow:0 1px 5px rgba(0,0,0,.5);}
 .location-popup img{ width: 100%; height: 100%; border-radius:5px; -webkit-box-sizing:border-box;box-sizing:border-box;}
 .location-popup-tag{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; border-radius:5px; text-align: center; white-space: nowrap; overflow: hidden; font-size:14px; color: #fff; background: rgba(0,0,0,.5);}
 .location-popup-tag:before{ display: inline-block; content: ""; width: 0; height: 100%; font-size: 0; vertical-align: middle;}
@@ -197,14 +198,15 @@ body{ color: #333; background: #fff;}
 .location-popup-5{ left: 295px; top: 180px;-webkit-animation:fall 1.8s ease-out;animation:fall 2s eas1.8-out;}
 
 .location-popup-3:after,.location-popup-5:after{ margin-left: -22px; border-width: 12px 8px 13px 16px; -webkit-transform:rotate(-300deg); transform:rotate(-300deg);}
-.location-popup-3:before,.location-popup-5:before{ bottom: -17px; margin-left: -19px;}
+/*.location-popup-3:before,.location-popup-5:before{ bottom: -17px; margin-left: -19px;}*/
+.location-popup-3 .iconfont,.location-popup-5 .iconfont{ margin-left: -34px;}
+.location-popup-0 .iconfont{ color: red;}
 
-.location-map .iconfont{ position: absolute; left: 50%; top: 50%; font-size: 32px; margin-left: -16px; margin-top: -24px; color: red; text-shadow:0 1px 5px rgba(0,0,0,.5);}
 .location-popup-0{ left: 140px; top: 275px; z-index: 22;}
 .location-popup-0:before{ display: none;}
 .radar{ position: absolute; left: 50%; top: 50%; z-index: 0;}
-.radar:before{ content: ''; position: absolute; width: 240px; height: 240px; border-radius: 50%; box-shadow: 0 0 1px 2px rgba(255,0,0,.3); top: 50%; left: 50%; margin-top: -120px; margin-left: -120px; z-index: 3; opacity: 0; -webkit-animation: halo 1.8s 0s infinite ease-out; animation: halo 1.8s 0s infinite ease-out; }
-.radar:after{ content: ''; position: absolute; width: 300px; height: 300px; border-radius: 50%; box-shadow: 0 0 1px 2px rgba(255,0,0,.3); top: 50%; left: 50%; margin-top: -150px; margin-left: -150px; z-index: 3; opacity: 0; -webkit-animation: halo 2s 0.5s infinite ease-out; animation: halo 2s 0.5s infinite ease-out; }
+.radar:before{ content: ''; position: absolute; width: 240px; height: 240px; border-radius: 50%; box-shadow: 0 0 1px 1px rgba(0,0,0,.3); top: 50%; left: 50%; margin-top: -120px; margin-left: -120px; z-index: 3; opacity: 0; -webkit-animation: halo 1.8s 0s infinite ease-out; animation: halo 1.8s 0s infinite ease-out; }
+.radar:after{ content: ''; position: absolute; width: 300px; height: 300px; border-radius: 50%; box-shadow: 0 0 1px 1px rgba(0,0,0,.3); top: 50%; left: 50%; margin-top: -150px; margin-left: -150px; z-index: 3; opacity: 0; -webkit-animation: halo 2s 0.5s infinite ease-out; animation: halo 2s 0.5s infinite ease-out; }
 
 /* page detail */
 .view-preview{ height: 100%; overflow: hidden; background: rgba(255,255,255,.8);}
