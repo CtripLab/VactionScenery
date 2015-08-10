@@ -190,11 +190,11 @@ body{ color: #333; background: #fff;}
 .location-popup-tag{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; border-radius:5px; text-align: center; white-space: nowrap; overflow: hidden; font-size:14px; color: #fff; background: rgba(0,0,0,.5);}
 .location-popup-tag:before{ display: inline-block; content: ""; width: 0; height: 100%; font-size: 0; vertical-align: middle;}
 
-.location-popup-1{ left: 120px; top: 120px;}
-.location-popup-2{ left: 44px; top: 138px;}
-.location-popup-3{ left: 260px; top: 380px;}
-.location-popup-4{ left: 77px; top: 219px;}
-.location-popup-5{ left: 295px; top: 180px;}
+.location-popup-1{ left: 120px; top: 120px;-webkit-animation:fall 0.5s ease-out;animation:fall 0.5s ease-out;}
+.location-popup-2{ left: 44px; top: 138px;-webkit-animation:fall 1.5s ease-out;animation:fall 1.5s ease-out;}
+.location-popup-3{ left: 260px; top: 380px;-webkit-animation:fall 1.2s ease-out;animation:fall 2s1.2ease-out;}
+.location-popup-4{ left: 77px; top: 219px;-webkit-animation:fall 0.8s ease-out;animation:fall 2s e0.8se-out;}
+.location-popup-5{ left: 295px; top: 180px;-webkit-animation:fall 1.8s ease-out;animation:fall 2s eas1.8-out;}
 
 .location-popup-3:after,.location-popup-5:after{ margin-left: -22px; border-width: 12px 8px 13px 16px; -webkit-transform:rotate(-300deg); transform:rotate(-300deg);}
 .location-popup-3:before,.location-popup-5:before{ bottom: -17px; margin-left: -19px;}
