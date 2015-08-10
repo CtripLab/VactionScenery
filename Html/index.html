@@ -77,28 +77,51 @@
     </div>
 </div>
 
-<div class="view view-location" id="positionView" style="display: none">
-    <div class="cm-header header-search">
-        <div class="cm-header-inner">
-            <span id="btnPositionBack" class="cm-header-icon fl"><i class="icon-back"></i></span>
 
-            <div class="search-box">
-                <input id="_input" type="text" placeholder="所在位置">
-            </div>
+<div class="view view-location" id="positionView" style="display: none">
+    <div class="cm-header">
+        <div class="cm-header-inner">
+            <span class="cm-header-icon fl"><i class="icon-back"></i></span>
+            <span class="cm-header-icon fr"><i class="iconfont" style="font-size:18px;">&#xe605;</i></span>
+            <h1 class="cm-page-title">实景推荐</h1>
         </div>
     </div>
-
     <div class="cm-page">
         <div class="page-content">
-            <div class="location-map" id="allmap">
-            </div>
-            <div class="location-list" id="location-list">
-                <div class="loading" id="loading" style="display: block"></div>
-                <ul id="r-result"></ul>
+            <div class="location-map" style="bottom:0;">
+                <img src="../assets/images/location2.png" alt="" style="">
+                <div class="radar"></div>
+                <i class="iconfont">&#xe607;</i>
             </div>
         </div>
     </div>
+    <div class="location-popup location-popup-0">
+        <span class="location-popup-tag">我的</span>
+        <img src="../assets/images/_p1.jpg" alt="">
+    </div>
+    <div class="location-popup location-popup-1">
+        <span class="location-popup-tag">酒店</span>
+        <img src="../assets/images/recommend-hotel-1.jpg" alt="">
+    </div>
+    <div class="location-popup location-popup-2">
+        <span class="location-popup-tag">旅游</span>
+        <img src="../assets/images/recommend-trip-1.jpg" alt="">
+    </div>
+    <div class="location-popup location-popup-3">
+        <span class="location-popup-tag">美食</span>
+        <img src="../assets/images/recommend-food-1.jpg" alt="">
+    </div>
+    <div class="location-popup location-popup-4">
+        <span class="location-popup-tag">美食</span>
+        <img src="../assets/images/recommend-food-2.jpg" alt="">
+    </div>
+    <div class="location-popup location-popup-5">
+        <span class="location-popup-tag">酒店</span>
+        <img src="../assets/images/recommend-hotel-2.jpg" alt="">
+    </div>
 </div>
+
+
 
 <div class="view" id="userView" style="display: none">
     <div class="cm-header">
@@ -228,7 +251,7 @@
     </div>
 </div>
 
-<div class="view" id="productView" style="display: none">
+<div class="view" id="productView" style="display: block">
     <div class="cm-header">
         <div class="cm-header-inner">
             <span id="btnProBack" class="cm-header-icon fl"><i class="icon-back"></i></span>
@@ -292,8 +315,8 @@
                             <div class="desc">凌空SOHO</div>
                         </div>
                         <div class="info">
-                            <div class="author"><i class="iconfont"></i>3214</div>
-                            <div class="location"><i class="iconfont"></i>上海</div>
+                            <div class="author"><i class="iconfont">赞</i>3214</div>
+                            <div class="location"><i class="iconfont">@</i>上海</div>
                         </div>
                     </li>
                     <li>
@@ -303,8 +326,8 @@
                             <div class="desc">凌空SOHO</div>
                         </div>
                         <div class="info">
-                            <div class="author"><i class="iconfont"></i>3214</div>
-                            <div class="location"><i class="iconfont"></i>上海</div>
+                            <div class="author"><i class="iconfont">赞</i>3214</div>
+                            <div class="location"><i class="iconfont">@</i>上海</div>
                         </div>
                     </li>
                 </ul>
